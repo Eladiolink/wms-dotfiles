@@ -5,6 +5,12 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+# i3 config file (v4)
+#
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+#DEFAULT_LAYOUT tile
+
 # Plasma compatibility improvements
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
@@ -24,10 +30,8 @@ for_window [class="plasmashell" window_type="notification"] border none, move po
 no_focus [class="plasmashell" window_type="notification"]
 
 for_window [title="Área de trabalho @ QRect.*"] kill; floating enable; border none
+for_window [title="Área de trabalho — Plasma"] kill; floating enable; border none
 for_window [title="Arbeitsfläche — Plasma"] kill; floating enable; border none
-# i3 config file (v4)
-#
-# Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
 
@@ -66,7 +70,7 @@ floating_modifier $mod
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
+#tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec kitty
@@ -75,7 +79,13 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons
+
+#default_orientation vertical #start in opposite orientation from your monitor
+#for_window [class=".*"] split toggle #toggles split at each new window
+#bindsym $mod+shift+q split toggle kill #kill command resets the split
+#bindsym $mod+e layout toggle split # should already exist but use if split orientation  messes up
+
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -86,7 +96,7 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
-bindsym $mod+ccedilla focus right
+bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -98,7 +108,7 @@ bindsym $mod+Right focus right
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
-bindsym $mod+Shift+ccedilla move right
+bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -118,10 +128,12 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-#bindsym $mod+k layout toggle split
+bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
+
+bindsym $mod+b exec --no-startup-id rofi-bluetooth
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -187,7 +199,7 @@ mode "resize" {
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym l resize shrink height 10 px or 10 ppt
-        bindsym ccedilla resize grow width 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -201,29 +213,42 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
+#gaps inner 20 20 30 0
+
+
 bindsym $mod+r mode "resize"
+bindsym $mod+z exec --no-startup-id sh ~/.config/rofi-wifi-menu/rofi-wifi-menu.sh
+
+# bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+
+# bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
+# bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 # using plasma's logout screen instead of i3's
-#bindsym $mod+b exec qdbus org.kde.ksmserver /KSMServer logout 1 0 3
+bindsym $mod+Shift+e exec --no-startup-id qdbus-qt5 org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
+exec --no-startup-id ksuperkey
 
-# using plasma's logout screen instead of i3's
-bindsym $mod+Shift+e exec --no-startup-id qdbus-qt5 org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1i
+exec --no-startup-id polybar -r
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id setxkbmap -model abnt2 -layout br -variant abnt2
+exec --no-startup-id picom &
+exec --no-startup-id dunst &
+exec --no-startup-id $HOME/./wallpaper.sh
 
-for_window [class=".*"] border pixel 0
-
+##### i3-gaps ##5 5############
+for_window [class="^.*"] border pixel 0
 gaps inner 10
-gaps outer 10 
+gaps outer 0
 
-#exec --no-startup-id nitrogen --restore
-exec --no-startup-id feh --bg-fill ~/Downloads/'anime-Samurai-7-wallpaper-3d-anime-girls-Art-Nouveau-1920413-wallhere.com(1).jpg'
-
-#bindsym XF86AudioRaiseVolume exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "increase_volume"
-#bindsym XF86AudioLowerVolume exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "decrease_volume"
-#bindsym XF86AudioMute exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "mute"
-#bindsym XF86AudioMicMute exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "mic_mute"
+####  border ###############
+#border colors #FF0000
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-#        status_command i3status
-#}
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #39003a #285577 #ffffff #2e9ef4   #39003a
+client.focused_inactive #39003a #5f676a #ffffff #484e50   #39003a
+client.unfocused        #39003a #222222 #888888 #292d2e   #39003a
+client.urgent           #39003a #900000 #ffffff #900000   #39003a
+client.placeholder      #39003a #0c0c0c #ffffff #000000   #39003a
+client.focused_stack    #39003a #ffffff #ffffff #39003a   #39003a
