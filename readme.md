@@ -1,5 +1,20 @@
 # I3-Dotfiles
 
+## Cyberpunk Girl
+
+**Dependencies:**
+ * Polybar
+ * Neofetch
+ * Kitty Terminal
+ * Feh or Nitrogen
+
+**Fonts:**
+ * Nerd Font
+ * Font Awesome 6
+
+[Wallpaper](https://drive.google.com/file/d/12eJEojurPNkDkwcbntNghidSLyXgK3yk/view?usp=sharing)
+
+![Cyberpunk Girl](https://github.com/Eladiolink/i3-dotfiles/blob/main/cyberpunk-girl/cyberpunk-girl.png)
 ## My Default Simple Theme
 
 **Dependencies:**
