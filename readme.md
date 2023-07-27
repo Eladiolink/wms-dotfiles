@@ -1,5 +1,6 @@
 # I3-Dotfiles
 
+![Cyberpunk Girl](https://github.com/Eladiolink/i3-dotfiles/blob/main/cyberpunk-girl/cyberpunk-girl.png)
 ## Cyberpunk Girl
 
 **Dependencies:**
@@ -14,7 +15,8 @@
 
 [Wallpaper](https://drive.google.com/file/d/12eJEojurPNkDkwcbntNghidSLyXgK3yk/view?usp=sharing)
 
-![Cyberpunk Girl](https://github.com/Eladiolink/i3-dotfiles/blob/main/cyberpunk-girl/cyberpunk-girl.png)
+
+![Defalt Theme](https://github.com/Eladiolink/i3-dotfiles/blob/main/default/default.png)
 ## My Default Simple Theme
 
 **Dependencies:**
@@ -30,7 +32,10 @@
  
 [Wallpaper](https://drive.google.com/file/d/1QHOGGvxSHewHarW1Ecv98ZUlZU5wtFso/view?usp=share_link)
 
-![Defalt Theme](https://github.com/Eladiolink/i3-dotfiles/blob/main/default/default.png)
+
+
+ 
+![Anime Samurai Girl](https://github.com/Eladiolink/i3-dotfiles/blob/main/samurai-girl/Samurai_girl.png)
 
 ## Samurai Girl
 
@@ -48,5 +53,4 @@ Polybar reference: [Komi7/nix-dot](https://github.com/Komi7/nix-dot)
  * MesloLGS NF (optional)
  
 [Wallpaper](https://drive.google.com/file/d/1cbkhPu7YTrgxhXuZWp9P_GP_K2BKGOfx/view?usp=share_link)
- 
-![Anime Samurai Girl](https://github.com/Eladiolink/i3-dotfiles/blob/main/samurai-girl/Samurai_girl.png)
+
