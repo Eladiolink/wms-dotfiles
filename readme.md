@@ -17,6 +17,8 @@
 
 ---
 
+
+
 ![Defalt Theme](https://github.com/Eladiolink/i3-dotfiles/blob/main/default/default.png)
 ## My Default Simple Theme
 
@@ -34,6 +36,8 @@
 [Wallpaper](https://drive.google.com/file/d/1QHOGGvxSHewHarW1Ecv98ZUlZU5wtFso/view?usp=share_link)
 
 ---
+
+
 
 ![Anime Samurai Girl](https://github.com/Eladiolink/i3-dotfiles/blob/main/samurai-girl/Samurai_girl.png)
 
