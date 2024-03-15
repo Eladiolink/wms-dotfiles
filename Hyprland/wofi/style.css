@@ -1,0 +1,46 @@
+window {
+margin: 5px;
+font-weight: bold;
+color: #FFF;
+background-color: transparent;
+background: linear-gradient(135deg,#8300E6,#F5001D);
+border-radius: 10px;
+}
+
+#input {
+margin: 5px;
+background-color: transparent;
+color: white
+}
+
+#inner-box {
+margin: 5px;
+background-color: transparent;
+}
+
+#outer-box {
+margin: 2px;
+border-radius: 10px;
+background-color: rgba(0, 0, 0, 0.79);
+}
+
+#scroll {
+margin: 5px;
+background-color: transparent;
+}
+
+#text {
+margin: 5px;
+background-color: transparent;
+}
+
+#entry:selected {
+  border-radius: 10px;
+  border: 1px solid;
+  background-color: rgba(65, 65, 65, 0.33);
+}
+
+#text:selected {
+  background-color: rgba(65, 65, 65, 0.33);
+}
+
