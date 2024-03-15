@@ -1,6 +1,6 @@
 # I3-Dotfiles
 
-![Cyberpunk Girl](https://github.com/Eladiolink/i3-dotfiles/blob/main/cyberpunk-girl/cyberpunk-girl.png)
+![Cyberpunk Girl](https://github.com/Eladiolink/i3-dotfiles/blob/main/i3wm/cyberpunk-girl/cyberpunk-girl.png)
 ## Cyberpunk Girl
 
 **Dependencies:**
@@ -19,7 +19,7 @@
 
 
 
-![Defalt Theme](https://github.com/Eladiolink/i3-dotfiles/blob/main/default/default.png)
+![Defalt Theme](https://github.com/Eladiolink/i3-dotfiles/blob/main/i3wm/default/default.png)
 ## My Default Simple Theme
 
 **Dependencies:**
@@ -39,7 +39,7 @@
 
 
 
-![Anime Samurai Girl](https://github.com/Eladiolink/i3-dotfiles/blob/main/samurai-girl/Samurai_girl.png)
+![Anime Samurai Girl](https://github.com/Eladiolink/i3-dotfiles/blob/main/i3wm/samurai-girl/Samurai_girl.png)
 
 ## Samurai Girl
 
